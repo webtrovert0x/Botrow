@@ -1,14 +1,14 @@
 # 🤖 Botrow Architecture Specification
 **Universal Person-to-Person (P2P) Commerce & AI-Underwritten Clearinghouse**
-**Network:** BOT Chain Testnet (Chain ID: 968 | RPC: `https://rpc.bohr.life`)  
-**Smart Contract Address:** `0xc73306D7154Bf41bB6c7B6ee4Cc176c864fC681b`
+**Network:** BOT Chain Mainnet (Chain ID: 677 | RPC: `https://rpc.botchain.ai`)  
+**Smart Contract Address:** `0x64aa9C9FFded25b5DF458689e6fE48980AC4D2b8`
 
 ---
 
 ## 📐 High-Level System Architecture
 
 ```text
-                    BOT Chain (Chain ID: 968)
+                    BOT Chain (Chain ID: 677)
                         │
              Smart Contract (`Botrow.sol`)
                         │
