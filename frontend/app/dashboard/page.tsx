@@ -264,9 +264,9 @@ export default function DashboardPage() {
               Order & Shipping Dashboard
             </h1>
             <p className="mt-1 text-xs font-mono text-zinc-400 flex items-center gap-2">
-              <span>Connected Wallet: <span className="text-zinc-200">{address}</span></span>
+              <span className="truncate max-w-[120px] sm:max-w-none inline-block align-bottom">Connected Wallet: <span className="text-zinc-200 break-all">{address?.slice(0,6)}...{address?.slice(-4)}</span></span>
               <span className="text-zinc-600">|</span>
-              <span>Balance: <span className="text-emerald-400 font-bold">{balanceData ? parseFloat(formatEther(balanceData.value)).toFixed(4) : "0.00"} BOT</span></span>
+              <span className="whitespace-nowrap">Balance: <span className="text-emerald-400 font-bold">{balanceData ? parseFloat(formatEther(balanceData.value)).toFixed(4) : "0.00"} BOT</span></span>
               <button 
                 onClick={() => setIsFiatModalOpen(true)}
                 className="ml-2 px-2 py-0.5 bg-emerald-500 hover:bg-emerald-400 text-black text-[10px] font-bold uppercase rounded transition-colors"
@@ -309,7 +309,7 @@ export default function DashboardPage() {
         )}
 
         {/* Dual Role Navigation Tabs */}
-        <div className="flex border-b border-white/[0.08] font-mono text-xs">
+        <div className="flex overflow-x-auto whitespace-nowrap border-b border-white/[0.08] font-mono text-xs pb-1 custom-scrollbar">
           <button
             onClick={() => setActiveTab("buyer")}
             className={`py-3 px-6 font-bold uppercase tracking-wider flex items-center gap-2 transition-all border-b-2 ${
@@ -558,9 +558,9 @@ export default function DashboardPage() {
                         <div className="text-[10px] text-zinc-500 uppercase font-semibold flex items-center gap-1">
                           <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" /> Blockchain Escrow Parameters
                         </div>
-                        <div className="text-zinc-300">Contract: <span className="text-white font-mono">{BOTROW_CONTRACT_ADDRESS.slice(0, 12)}...</span></div>
-                        <div className="text-zinc-300">Buyer Wallet: <span className="text-zinc-100 font-mono font-bold">{formatUserDisplayName(order.deliveryInfo?.recipientName, order.buyer)}</span></div>
-                        <div className="text-zinc-400 text-[11px] pt-1 border-t border-white/[0.05]">
+                        <div className="text-zinc-300">Contract: <span className="text-white font-mono break-all">{BOTROW_CONTRACT_ADDRESS.slice(0, 12)}...</span></div>
+                        <div className="text-zinc-300">Buyer Wallet: <span className="text-zinc-100 font-mono font-bold break-all">{formatUserDisplayName(order.deliveryInfo?.recipientName, order.buyer)}</span></div>
+                        <div className="text-zinc-400 text-[11px] pt-1 border-t border-white/[0.05] break-all">
                           Tx: <a href={`https://scan.botchain.ai/tx/${order.txHash}`} target="_blank" rel="noreferrer" className="text-emerald-400 underline">{order.txHash ? `${order.txHash.slice(0, 16)}...` : "0x..."}</a>
                         </div>
                       </div>
