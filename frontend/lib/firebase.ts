@@ -5,13 +5,13 @@ import { getAnalytics, isSupported } from "firebase/analytics";
 
 // Botrow Firebase Project — botrow-6b6c9
 const firebaseConfig = {
-  apiKey: "AIzaSyBZ_TDrFSc55XK9bjsxUHk-2TCyKMH6qTU",
-  authDomain: "botrow-6b6c9.firebaseapp.com",
-  projectId: "botrow-6b6c9",
-  storageBucket: "botrow-6b6c9.firebasestorage.app",
-  messagingSenderId: "267484332843",
-  appId: "1:267484332843:web:769b75194698b5e67dbb6e",
-  measurementId: "G-PSKP5H6PZT",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
 // Prevent duplicate Firebase app initialization during Next.js hot reloads
