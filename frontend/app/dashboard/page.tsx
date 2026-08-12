@@ -239,7 +239,7 @@ export default function DashboardPage() {
             onClick={() => open({ view: "Connect" })}
             className="mt-6 w-full py-2.5 rounded-md bg-emerald-500 text-black font-mono font-bold text-xs uppercase tracking-wider hover:bg-emerald-400 transition-colors"
           >
-            Connect Reown Wallet
+            CONNECT WALLET
           </button>
         </div>
       </div>

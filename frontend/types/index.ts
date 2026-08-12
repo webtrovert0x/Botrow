@@ -8,7 +8,7 @@ export interface AIAnalysis {
   priceEstimateBot: number;
   scamWarningReason?: string;
   suggestedTags: string[];
-  isVerifiedByGemini: boolean;
+  isVerifiedByBotrowAI: boolean;
   optimizedTitle?: string;
   professionalDescription?: string;
 }

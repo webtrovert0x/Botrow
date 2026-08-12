@@ -409,7 +409,7 @@ export default function AssetDetailModal({ params }: { params: Promise<{ id: str
                 </span>
                 <span className="text-xs font-mono text-emerald-400 bg-zinc-900/90 backdrop-blur border border-emerald-500/30 px-2.5 py-1 rounded font-semibold flex items-center gap-1.5 shadow">
                   <ShieldCheck className="w-3.5 h-3.5" />
-                  GEMINI AI VERIFIED
+                  BOTROW AI VERIFIED
                 </span>
               </div>
             </div>

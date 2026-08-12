@@ -45,7 +45,7 @@ export default function CreateListingPage() {
   const [brand, setBrand] = useState("");
   const [location, setLocation] = useState("Lagos / Global Dispatch");
 
-  // Image Upload UX (Jiji / Amazon style)
+  // Image Upload UX
   // Tracks preview URLs for display (blob URLs for local files, real CDN URLs for samples)
   const [images, setImages] = useState<string[]>([]);
   // Actual File objects for real Firebase Storage upload
@@ -176,7 +176,7 @@ export default function CreateListingPage() {
         
         imageBase64 = await new Promise((resolve) => {
           img.onload = () => {
-            // Downscale to max 800px width/height for Gemini
+            // Downscale to max 800px width/height for Botrow AI
             const MAX_SIZE = 800;
             let width = img.width;
             let height = img.height;
@@ -340,7 +340,7 @@ export default function CreateListingPage() {
         {/* Header */}
         <div className="border-b border-white/[0.07] pb-6">
           <div className="flex items-center gap-2 text-xs font-mono text-emerald-400 mb-2">
-            <span>● JIJI & AMAZON STYLE SELLER STUDIO</span>
+            <span>● PREMIUM SELLER STUDIO</span>
             <span className="text-zinc-600">|</span>
             <span className="text-zinc-400">P2P SMART CONTRACT ESCROW</span>
           </div>
@@ -348,7 +348,7 @@ export default function CreateListingPage() {
             List Item for Sale
           </h1>
           <p className="mt-2 text-sm text-zinc-400 max-w-3xl leading-relaxed">
-            Create an engaging listing with multiple high-resolution photos just like Jiji.ng or Amazon Seller Central. Our integrated **Botrow AI Assistant** analyzes your images and descriptions to verify condition and maximize your Trust Score!
+            Create an engaging listing with multiple high-resolution photos. Our integrated **Botrow AI Assistant** analyzes your images and descriptions to verify condition and maximize your Trust Score!
           </p>
         </div>
 
@@ -364,7 +364,7 @@ export default function CreateListingPage() {
         {/* Main Seller Studio Form */}
         <form onSubmit={handleSubmit} className="space-y-8">
           
-          {/* SECTION 1: PHOTO UPLOADER (JIJI / AMAZON UX) */}
+          {/* SECTION 1: PHOTO UPLOADER */}
           <div className="p-6 md:p-8 bg-[#0E1017] border border-white/[0.07] rounded-lg shadow-md space-y-6">
             <div className="border-b border-white/[0.06] pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <div>
@@ -596,7 +596,7 @@ export default function CreateListingPage() {
 
               <div>
                 <label className="block text-xs font-mono font-semibold uppercase text-zinc-300 mb-2">
-                  ITEM DESCRIPTION & PROVENANCE (BE AS TRANSPARENT AS JIJI / AMAZON SELLERS)
+                  ITEM DESCRIPTION & PROVENANCE (BE TRANSPARENT)
                 </label>
                 <textarea
                   rows={4}

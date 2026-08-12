@@ -34,7 +34,7 @@ export const MOCK_PRODUCTS: Product[] = [
       riskLevel: "LOW",
       priceEstimateBot: 430,
       suggestedTags: ["Used Camera", "Sony a7 IV", "Photography", "Electronics"],
-      isVerifiedByGemini: true,
+      isVerifiedByBotrowAI: true,
     },
     specifications: {
       "Condition": "Used / Excellent (Normal Wear)",
@@ -63,7 +63,7 @@ export const MOCK_PRODUCTS: Product[] = [
       riskLevel: "LOW",
       priceEstimateBot: 150,
       suggestedTags: ["Used Furniture", "Herman Miller", "Office", "Home"],
-      isVerifiedByGemini: true,
+      isVerifiedByBotrowAI: true,
     },
     specifications: {
       "Condition": "Used / Very Good (Minor frame scuff)",
@@ -76,7 +76,7 @@ export const MOCK_PRODUCTS: Product[] = [
     id: "prod-3",
     onchainListingId: 103,
     title: "Vintage Rolex GMT-Master II ('Pepsi' Bezel, Ref: 16710)",
-    description: "Pre-owned luxury timepiece traded directly between collectors. Comes complete with original presentation box and chronometer certificate. Gemini AI confirms serial engraving authenticity and fair secondary market valuation.",
+    description: "Pre-owned luxury timepiece traded directly between collectors. Comes complete with original presentation box and chronometer certificate. Botrow AI confirms serial engraving authenticity and fair secondary market valuation.",
     priceBot: 3100,
     usdEquivalent: 13950,
     category: "Fashion & Apparel",
@@ -92,7 +92,7 @@ export const MOCK_PRODUCTS: Product[] = [
       riskLevel: "LOW",
       priceEstimateBot: 3150,
       suggestedTags: ["Luxury Watch", "Used Rolex", "Fashion", "Collectibles"],
-      isVerifiedByGemini: true,
+      isVerifiedByBotrowAI: true,
     },
     specifications: {
       "Condition": "Pre-Owned / Collector Grade (Unpolished)",
@@ -121,7 +121,7 @@ export const MOCK_PRODUCTS: Product[] = [
       riskLevel: "LOW",
       priceEstimateBot: 125,
       suggestedTags: ["Foodstuff", "Gourmet", "Iberian Ham", "Olive Oil"],
-      isVerifiedByGemini: true,
+      isVerifiedByBotrowAI: true,
     },
     specifications: {
       "Condition": "Fresh / Artisanal Small Batch Harvest",
@@ -150,7 +150,7 @@ export const MOCK_PRODUCTS: Product[] = [
       riskLevel: "LOW",
       priceEstimateBot: 845,
       suggestedTags: ["New Laptop", "MacBook Pro", "Apple", "Computers"],
-      isVerifiedByGemini: true,
+      isVerifiedByBotrowAI: true,
     },
     specifications: {
       "Condition": "Brand New / Factory Sealed",
@@ -179,7 +179,7 @@ export const MOCK_PRODUCTS: Product[] = [
       riskLevel: "LOW",
       priceEstimateBot: 475,
       suggestedTags: ["Used Sneakers", "Vintage", "Jordan 1", "Collectibles"],
-      isVerifiedByGemini: true,
+      isVerifiedByBotrowAI: true,
     },
     specifications: {
       "Condition": "Pre-Owned / Archival Collector State",

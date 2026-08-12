@@ -173,7 +173,7 @@ export function Navbar() {
                 className="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-md text-xs font-medium bg-emerald-500 text-black hover:bg-emerald-400"
               >
                 <Wallet className="w-4 h-4" />
-                Connect Reown Wallet
+                CONNECT WALLET
               </button>
             ) : (
               <button
