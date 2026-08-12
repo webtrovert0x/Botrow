@@ -1,0 +1,53 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@reown/appkit": "^1.8.23",
+    "@reown/appkit-adapter-wagmi": "^1.8.23",
+    "@tanstack/react-query": "^5.101.4",
+    "@types/crypto-js": "^4.2.2",
+    "@wagmi/core": "^3.6.4",
+    "@x402/core": "^2.19.0",
+    "@x402/evm": "^2.21.0",
+    "@x402/extensions": "^2.19.0",
+    "@x402/svm": "^2.19.0",
+    "canvas-confetti": "^1.9.4",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "crypto-js": "^4.2.0",
+    "firebase": "^12.17.1",
+    "framer-motion": "^12.43.0",
+    "heic2any": "^0.0.4",
+    "lucide-react": "^1.28.0",
+    "next": "16.2.12",
+    "nodemailer": "^9.0.5",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-hot-toast": "^2.6.0",
+    "react-paystack": "^6.0.0",
+    "resend": "^6.18.1",
+    "tailwind-merge": "^3.6.0",
+    "viem": "^2.55.11",
+    "wagmi": "^2.19.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/canvas-confetti": "^1.9.0",
+    "@types/node": "^20",
+    "@types/nodemailer": "^8.0.1",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.12",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
