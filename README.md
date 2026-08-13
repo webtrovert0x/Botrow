@@ -1,15 +1,20 @@
 <div align="center">
-  <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2832&auto=format&fit=crop" width="100%" alt="Botrow Header Image" style="border-radius: 12px; margin-bottom: 20px;">
+  <img src="frontend/public/botrow-logo.png" width="300" alt="Botrow Logo" style="margin-bottom: 20px;">
   
   <h1>🤖 Botrow</h1>
-  <p><strong>Autonomous Zero-Trust Escrow & Clearinghouse Protocol on BOT Chain</strong></p>
+  <p><strong>The Autonomous Zero-Trust Escrow & Clearinghouse on BOT Chain</strong></p>
 
   <p>
     <a href="#-about-the-project">About</a> •
     <a href="#-key-features">Features</a> •
-    <a href="#-architecture--tech-stack">Architecture</a> •
     <a href="#-smart-contract-engine">Smart Contracts</a> •
+    <a href="#-architecture--tech-stack">Tech Stack</a> •
     <a href="#-getting-started">Quickstart</a>
+  </p>
+
+  <p>
+    <img src="https://img.shields.io/badge/Network-BOT%20Chain%20Mainnet-10b981?style=for-the-badge&logo=web3" alt="Network" />
+    <img src="https://img.shields.io/badge/Security-Audited-blue?style=for-the-badge&logo=security" alt="Security" />
   </p>
 </div>
 
@@ -17,42 +22,29 @@
 
 ## 🏆 About The Project
 
-**Botrow** is a next-generation peer-to-peer decentralized escrow commerce platform built exclusively for the **2026 Botchain Hackathon**. 
+**Botrow** is a next-generation decentralized peer-to-peer escrow commerce platform built exclusively for the **2026 Botchain Hackathon**. 
 
-It leverages **BOT Chain** smart contracts for zero-trust financial locking, a dynamic **Fiat-to-Crypto Gateway**, and an innovative decentralized **AI Scam Verification Agent** (powered by Gemini) to completely eliminate the need for human dispute resolution in digital and physical transactions.
+By leveraging the cryptographic security of **BOT Chain** smart contracts, a seamless **Fiat-to-Crypto Gateway**, and our cutting-edge decentralized **AI Scam Verification Agent** (powered by Gemini), Botrow completely eliminates the need for human dispute resolution in digital and physical commerce.
 
-We've successfully migrated to the **BOT Chain Mainnet (Chain 677)**, bringing a production-ready, frictionless Web3 commerce experience to the ecosystem.
+Botrow represents the gold standard for frictionless, zero-trust Web3 commerce on the BOT Chain ecosystem.
 
 ---
 
 ## ✨ Key Features
 
-### 1. Zero-Trust Smart Contract Escrow
-- **Trustless Transactions**: Buyers lock native BOT tokens into a non-custodial smart contract instead of sending them directly to a seller.
-- **Automated Settlement**: Funds are only released when the buyer cryptographically confirms delivery.
-- **7-Day Timeout**: Prevents indefinite fund freezing. If a buyer fails to confirm receipt or open a dispute within 7 days, sellers can release the payout directly.
+### 🔒 1. Zero-Trust Smart Contract Escrow
+- **Trustless Transactions**: Buyers lock native BOT tokens directly into a non-custodial smart contract instead of sending them to a seller.
+- **Automated Settlement**: Funds are irrevocably released only when the buyer cryptographically confirms delivery.
+- **7-Day Auto-Timeout Guard**: Prevents indefinite fund freezing. If a buyer fails to confirm receipt or open a dispute within 7 days, the seller can autonomously trigger a payout.
 
-### 2. Live Fiat-to-Crypto On-Ramp & Off-Ramp
-- **Paystack Integration**: Built-in fiat gateway allows users to buy BOT directly with local currencies (e.g., NGN/USD) via bank transfer or card.
-- **Server-Side Security**: Token disbursements are calculated securely on a Next.js backend using live API exchange rates, preventing frontend manipulation.
-- **Idempotent Webhooks**: Double-spend and replay attacks are prevented using Firestore transaction locks.
+### 💳 2. Live Fiat-to-Crypto On-Ramp & Off-Ramp
+- **Paystack Integration**: Built-in fiat gateway allows users to purchase BOT directly with local currencies (e.g., NGN/USD) via bank transfer or card.
+- **Server-Side Security**: Token disbursements are calculated securely on a Next.js backend using live API exchange rates, rendering frontend manipulation mathematically impossible.
+- **Idempotent Webhooks**: Double-spend and replay attacks are systematically thwarted using Firestore transaction locks.
 
-### 3. AI-Powered Dispute Resolution & Underwriting
-- **Botrow AI Agent**: In the event of a dispute, an autonomous AI Agent reviews chat logs, transaction metadata, and visual proof-of-life evidence.
-- **Intelligent Ruling**: The AI executes refunds or forces settlements by cryptographically interacting with the protocol, replacing traditional human customer support teams.
-
----
-
-## 🏗️ Architecture & Tech Stack
-
-| Layer | Technology |
-| :--- | :--- |
-| **Frontend** | Next.js 14 (App Router), React, TailwindCSS |
-| **Web3 / Blockchain** | Viem, Wagmi, Reown AppKit, BOT Chain Mainnet |
-| **Smart Contracts** | Solidity, Foundry, OpenZeppelin v5.7.0 |
-| **Backend & API** | Next.js Serverless Routes, Nodemailer |
-| **Database / State** | Firebase Firestore (Real-time syncing) |
-| **AI / Machine Learning** | Google Gemini (Vision & Text Models) |
+### 🤖 3. AI-Powered Dispute Resolution
+- **Botrow AI Judge**: In the event of a dispute, an autonomous AI Agent reviews chat logs, transaction metadata, and visual proof-of-life evidence uploaded by both parties.
+- **Instant Cryptographic Rulings**: The AI executes partial refunds, full refunds, or forced settlements by interacting with the protocol—replacing slow and biased human customer support teams.
 
 ---
 
@@ -76,13 +68,26 @@ Our contract replaces standard string revert messages with custom native errors 
 
 ---
 
+## 🏗️ Architecture & Tech Stack
+
+| Layer | Technology |
+| :--- | :--- |
+| **Frontend** | Next.js 14 (App Router), React, TailwindCSS, Framer Motion |
+| **Web3 / Blockchain** | Viem, Wagmi, Reown AppKit, BOT Chain Mainnet |
+| **Smart Contracts** | Solidity, Foundry, OpenZeppelin v5.7.0 |
+| **Backend API** | Next.js Serverless Routes, Resend / Nodemailer |
+| **Database / State** | Firebase Firestore (Real-time edge syncing) |
+| **AI Protocol** | Google Gemini (Vision & Text Multi-Modal Models) |
+
+---
+
 ## 🚀 Getting Started
 
-Follow these steps to run the Botrow application locally.
+Follow these steps to run the Botrow platform locally.
 
 ### Prerequisites
 - Node.js 18+
-- Foundry (for smart contract testing)
+- Foundry (for smart contract testing and deployment)
 
 ### 1. Clone & Install
 ```bash
@@ -91,7 +96,7 @@ cd botrow-marketplace/frontend
 npm install
 ```
 
-### 2. Environment Variables
+### 2. Environment Setup
 Create a `.env.local` file in the `frontend/` directory with the following variables:
 
 ```env
@@ -114,7 +119,7 @@ NEXT_PUBLIC_FIREBASE_API_KEY=...
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=...
 NEXT_PUBLIC_FIREBASE_PROJECT_ID=...
 
-# Nodemailer / SMTP
+# Email Gateway / SMTP
 SMTP_USER=your_email@gmail.com
 SMTP_PASS=your_app_password
 ```
@@ -128,5 +133,5 @@ Navigate to `http://localhost:3000` to interact with the dApp.
 ---
 
 <div align="center">
-  <p><i>Built with ❤️ for the BOT Chain Ecosystem.</i></p>
+  <p><i>Engineered with ❤️ for the BOT Chain Ecosystem.</i></p>
 </div>

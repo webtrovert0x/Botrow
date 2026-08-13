@@ -102,6 +102,14 @@ body {
 [data-theme="light"] .text-zinc-400 { color: #64748B !important; }
 [data-theme="light"] .text-zinc-500 { color: #94A3B8 !important; }
 [data-theme="light"] .text-zinc-600 { color: #94A3B8 !important; }
+[data-theme="light"] .text-amber-300 { color: #D97706 !important; }
+[data-theme="light"] .text-amber-400 { color: #B45309 !important; }
+[data-theme="light"] .text-emerald-50 { color: #064e3b !important; }
+[data-theme="light"] .text-emerald-400 { color: #059669 !important; }
+[data-theme="light"] .text-red-300 { color: #b91c1c !important; }
+[data-theme="light"] .text-red-400 { color: #991b1b !important; }
+[data-theme="light"] .text-red-500 { color: #7f1d1d !important; }
+[data-theme="light"] .bg-red-500\/20 { background-color: rgba(239, 68, 68, 0.15) !important; }
 
 /* -- Border overrides -- */
 [data-theme="light"] .border-white\/\[0\.07\] { border-color: #E2E8F0 !important; }

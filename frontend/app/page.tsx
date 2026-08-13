@@ -23,7 +23,7 @@ export default function Home() {
       value: `${completedOrdersCount > 0 ? completedOrdersCount : totalOrdersCount > 0 ? totalOrdersCount : "142"} Orders`,
       change: "100% On-Chain Settled",
     },
-    { label: "Total Value Locked (TVL)", value: "482,910 BOT", change: "+14.2% today" },
+    { label: "Platform Escrow Fees", value: "1% Fee", change: "99% direct to sellers" },
     { label: "AI Fraud Detection Accuracy", value: "99.98%", change: "Zero scam settlements" },
     { label: "Average Escrow Release Time", value: "1.4s", change: "Bohr RPC Finality" },
   ];

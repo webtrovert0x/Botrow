@@ -176,8 +176,8 @@ export default function CreateListingPage() {
         
         imageBase64 = await new Promise((resolve) => {
           img.onload = () => {
-            // Downscale to max 800px width/height for Botrow AI
-            const MAX_SIZE = 800;
+            // Downscale to max 400px width/height for much faster Botrow AI processing
+            const MAX_SIZE = 400;
             let width = img.width;
             let height = img.height;
             if (width > height && width > MAX_SIZE) {
@@ -190,7 +190,7 @@ export default function CreateListingPage() {
             canvas.width = width;
             canvas.height = height;
             ctx?.drawImage(img, 0, 0, width, height);
-            resolve(canvas.toDataURL("image/jpeg", 0.6));
+            resolve(canvas.toDataURL("image/jpeg", 0.4));
           };
           img.src = URL.createObjectURL(file);
         });
@@ -234,7 +234,7 @@ export default function CreateListingPage() {
     setTitle(aiAnalysisResult.improvedTitle);
     setDescription(aiAnalysisResult.improvedDescription);
     setCategory(aiAnalysisResult.suggestedCategory);
-    setAiAnalysisResult(null);
+    toast.success("AI Improvements Applied!");
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -375,14 +375,6 @@ export default function CreateListingPage() {
                 <div className="mt-2 p-3 bg-red-950/20 border border-red-500/30 rounded text-xs font-mono text-zinc-300">
                   <strong className="text-red-400">⚠️ PROOF OF LIFE REQUIRED:</strong> To prevent fake stock photos, you must include a handwritten piece of paper in your cover photo containing the code: <strong className="bg-red-500/20 text-red-300 px-1 py-0.5 rounded ml-1">Botrow - {securityCode}</strong>
                 </div>
-              </div>
-              
-              {/* Quick Demo Sample Loader */}
-              <div className="flex items-center gap-1 text-[11px] font-mono">
-                <span className="text-zinc-500 mr-1">Hackathon Samples:</span>
-                <button type="button" onClick={() => loadSamplePhotos("camera")} className="px-2 py-1 bg-zinc-800 hover:bg-zinc-700 rounded text-emerald-300 border border-white/10">Camera</button>
-                <button type="button" onClick={() => loadSamplePhotos("watch")} className="px-2 py-1 bg-zinc-800 hover:bg-zinc-700 rounded text-blue-300 border border-white/10">Watch</button>
-                <button type="button" onClick={() => loadSamplePhotos("laptop")} className="px-2 py-1 bg-zinc-800 hover:bg-zinc-700 rounded text-purple-300 border border-white/10">Laptop</button>
               </div>
             </div>
 
@@ -666,9 +658,10 @@ export default function CreateListingPage() {
                   <button
                     type="button"
                     onClick={applyAiImprovements}
-                    className="px-4 py-2 bg-emerald-500 text-black font-mono font-bold text-xs uppercase tracking-wider rounded hover:bg-emerald-400 transition-all shadow shrink-0"
+                    disabled={title === aiAnalysisResult.improvedTitle}
+                    className="px-4 py-2 bg-emerald-500 text-black font-mono font-bold text-xs uppercase tracking-wider rounded hover:bg-emerald-400 transition-all shadow shrink-0 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    ✓ Apply AI Suggestions
+                    {title === aiAnalysisResult.improvedTitle ? "✓ Applied" : "✓ Apply AI Suggestions"}
                   </button>
                 </div>
               </div>
