@@ -53,7 +53,7 @@ Buyer's Dispute Claim:
 
 Based on this information, issue a preliminary ruling.`;
 
-    const modelsToTry = ["gemini-3.5-flash", "gemini-2.5-flash"];
+    const modelsToTry = ["gemini-flash-latest", "gemini-3.1-flash-lite", "gemini-2.5-pro", "gemini-3.6-flash", "gemini-pro-latest"];
     let aiRulingData = null;
     
     for (const modelName of modelsToTry) {
